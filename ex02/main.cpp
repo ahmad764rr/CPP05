@@ -6,11 +6,11 @@
 
 int main() {
     try {
-        // Create bureaucrats
+        
         Bureaucrat alice("Alice", 1);
         Bureaucrat bob("Bob", 150);
         
-        // Create forms
+        
         ShrubberyCreationForm shrub("garden");
         RobotomyRequestForm robot("target");
         PresidentialPardonForm pardon("criminal");
@@ -18,7 +18,7 @@ int main() {
         std::cout << alice << std::endl;
         std::cout << shrub << std::endl;
         
-        // Test signing and executing
+
         shrub.beSigned(alice);
         alice.executeForm(shrub);
         

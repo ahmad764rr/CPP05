@@ -5,7 +5,7 @@
 #include <string>
 #include <exception>
 
-class Form; // forward declaration
+class Form;
 
 class Bureaucrat {
 private:
