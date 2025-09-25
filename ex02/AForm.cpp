@@ -1,6 +1,8 @@
 #include "AForm.hpp"
 #include "Bureaucrat.hpp"
 
+AForm::AForm() : name("default"), isSigned(false), signGrade(150), execGrade(150) {}
+
 AForm::AForm(const std::string& n, int s, int e)
     : name(n), isSigned(false), signGrade(s), execGrade(e) {
     if (s < 1 || e < 1) throw GradeTooHighException();

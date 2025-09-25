@@ -14,6 +14,7 @@ private:
     const int execGrade;
 
 public:
+    Form();
     Form(const std::string& n, int sGrade, int eGrade);
     Form(const Form& other);
     Form& operator=(const Form& other);

@@ -3,8 +3,22 @@
 #include <cstdlib>
 #include <ctime>
 
+RobotomyRequestForm::RobotomyRequestForm()
+    : AForm("RobotomyRequest", 72, 45), target("default") {}
+
 RobotomyRequestForm::RobotomyRequestForm(const std::string& t)
     : AForm("RobotomyRequest", 72, 45), target(t) {}
+
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& other)
+    : AForm(other), target(other.target) {}
+
+RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& other) {
+    if (this != &other) {
+        AForm::operator=(other);
+        target = other.target;
+    }
+    return *this;
+}
 
 RobotomyRequestForm::~RobotomyRequestForm() {}
 

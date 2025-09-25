@@ -15,6 +15,7 @@ private:
     const int execGrade;
 
 public:
+    AForm();
     AForm(const std::string& n, int sGrade, int eGrade);
     virtual ~AForm();
     AForm(const AForm& other);

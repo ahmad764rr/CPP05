@@ -1,16 +1,21 @@
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
 
+Bureaucrat::Bureaucrat() : name("default"), grade(150) {}
+
 Bureaucrat::Bureaucrat(const std::string& n, int g) : name(n), grade(g) {
-    if (g < 1) throw GradeTooHighException();
-    if (g > 150) throw GradeTooLowException();
+    if (g < 1)
+        throw GradeTooHighException();
+    if (g > 150)
+        throw GradeTooLowException();
 }
 
 Bureaucrat::~Bureaucrat() {}
 
 Bureaucrat::Bureaucrat(const Bureaucrat& other) : name(other.name), grade(other.grade) {}
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other) {
-    if (this != &other) grade = other.grade;
+    if (this != &other)
+        grade = other.grade;
     return *this;
 }
 
